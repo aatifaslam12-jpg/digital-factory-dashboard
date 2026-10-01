@@ -56,3 +56,56 @@ Supervisor may coordinate departments, agents, opportunity research, operations,
 
 ## Governance
 This document records architecture policy, not permission to execute consequential actions. Production code changes must be tested and reviewed according to each project's existing safeguards.
+
+
+## Intelligence & Autonomy Roadmap
+
+### V1 — Foundation (build/retain now)
+- **AI Router Score Engine:** choose agents using measured quality, reliability, latency, cost, credit availability and task risk.
+- **Evidence & Confidence Gate:** important outputs carry evidence/provenance and confidence/uncertainty; uncertainty triggers review or WAIT rather than invention.
+- **Permission Matrix / Least Privilege:** each agent gets only the tools/actions required for its role; consequential permissions are time/task scoped.
+- **Immutable Decision & Experiment Ledger:** record important decisions, tests, failures, model/provider versions, costs, approvals and rollback points.
+- **Universal Health Monitor:** detect stale data, API/model outages, latency spikes, quota exhaustion, corrupted artifacts, unexpected state and security anomalies.
+- **Safe Rollback:** every consequential deployment/config change has a known-good restore point.
+- **Data Quality Firewall:** validate freshness, completeness, schema, duplicates, leakage/contamination and source conflicts before downstream AI use.
+
+### V2 — Automation & resilience
+- **AI Champion–Challenger:** benchmark incumbent vs new models/providers on hidden representative tasks before promotion.
+- **Multi-Agent Jury:** separate Builder, Reviewer and Red-Team roles for critical changes; creator cannot self-certify high-impact work.
+- **Self-Healing Loop:** detect -> diagnose -> isolated repair -> deterministic tests -> compare -> approval gate -> deploy -> monitor -> rollback if degraded.
+- **Digital Twin / Sandbox:** simulate project workflows and failures before production changes.
+- **Budget Brain:** optimize model/API/GPU/video-provider selection against quality targets, quotas and monthly budget.
+- **Failure Prediction:** use health history and telemetry to identify rising error/latency/quota/storage risks before failure.
+- **Cross-Project Shared Services:** common model registry, cost ledger, secrets policy, health monitoring and technology watch; keep project data/permissions isolated.
+
+### V3 — Controlled autonomous evolution
+- **24/7 Technology & Opportunity Radar:** discover relevant models, algorithms, APIs, research and business opportunities; score relevance before testing.
+- **Automatic Skill Factory:** repeated successful workflows become versioned reusable skill candidates after validation.
+- **Capability Registry:** maintain what each agent/provider is proven to do, benchmark date, limits, cost and fallback.
+- **Drift & Regression Sentinel:** continuously detect degradation in model outputs, prompts, APIs, data, business KPIs and project behavior.
+- **Counterfactual / Shadow Evaluation:** compare what the new agent would have done without letting it control production.
+- **Automatic Retirement:** quarantine models/providers/workflows that become unreliable, too expensive, deprecated or consistently inferior; retain rollback evidence.
+- **Knowledge Distillation:** turn validated project lessons into compact playbooks so future agents inherit decisions without re-reading entire chat histories.
+
+## Additional project algorithms
+
+### Alpha Genesis
+- Regime-aware model routing: specialists may change by validated market regime, but no AI model alone can authorize a trade.
+- Signal disagreement/uncertainty gate: conflict reduces confidence and can force NO_TRADE.
+- Execution anomaly sentinel: detect slippage, broker mismatch, stale quotes, abnormal latency, order/position divergence and immediately apply existing fail-closed controls.
+- Research models remain asynchronous/off the deterministic live path.
+
+### CurioNova TV
+- Content Portfolio Optimizer: balance evergreen, trend-responsive and experimental topics instead of chasing every trend.
+- Pre-publish Quality Gate: evidence/factuality, originality, brand consistency, thumbnail/title promise-match and policy checks before human approval.
+- Provider Quality/Cost Router: benchmark video/image/voice providers and route each scene/job to the best validated quality-cost option.
+- Learning Loop: feed approved analytics back into topic, hook, retention and packaging experiments without auto-publishing.
+
+### Digital Factory
+- Opportunity Scoring Engine: score legal opportunities by demand, margin potential, startup cost, time-to-first-revenue, automation potential, competition, evidence quality and downside.
+- Small-Bet Experiment Engine: validate opportunities cheaply before allocating meaningful capital.
+- Unit-Economics Guard: track acquisition cost, tool/API cost, labor/time, gross margin, cash conversion and payback before scaling.
+- Agent Workforce Scheduler: allocate tasks to AI/human resources based on capability, urgency, cost, dependency and risk.
+
+## Complexity rule
+Do not implement every feature merely because it is documented. Add a layer only when its measurable benefit exceeds complexity, latency, maintenance and cost. V1 stability takes priority over V2/V3 autonomy.
