@@ -109,3 +109,8 @@ This document records architecture policy, not permission to execute consequenti
 
 ## Complexity rule
 Do not implement every feature merely because it is documented. Add a layer only when its measurable benefit exceeds complexity, latency, maintenance and cost. V1 stability takes priority over V2/V3 autonomy.
+
+
+## Model Challenger Note — 2026-10-03
+
+Gemini 4 Argon is registered as an **unvalidated candidate** for future benchmarking. Evaluate it on coding, large-context analysis, review quality, reliability, latency and cost before any promotion. Existing approval and rollback controls remain unchanged. Re-verify current provider availability and capabilities before integration.
